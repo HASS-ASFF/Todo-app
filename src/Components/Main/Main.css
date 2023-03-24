@@ -37,3 +37,6 @@
     border-bottom: none;
     color: white;
 }
+.strike-through {
+    text-decoration: line-through;
+  }  
