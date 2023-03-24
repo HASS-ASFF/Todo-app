@@ -24,6 +24,9 @@ export default function Main() {
     task: 'Jog arround the park 5x',
     checked: false,
   }]);
+
+  //filter state with three btns
+
   const [filter, setFilter] = useState('All');
 
   const uncheckTodo = todos.filter(item => !item.checked);
@@ -81,6 +84,7 @@ export default function Main() {
     const searchTerm = value.trim();
     setSearchTerm(searchTerm);
   };
+  
   //use effect to execute the block of code when ever we have a change in todos or seearchTerm
   useEffect(() => {
     const filteredList = todos.filter(todo => {
@@ -97,8 +101,8 @@ export default function Main() {
 
     return (
           <main className="main d-flex justify-content-center">
-            <div className="col-6">
-              <div className="input-group mb-3">
+            <div className="col-6 mb-5">
+              <div className="input-group mb-5">
                 <input
                   type="text"
                   className="form-control"
